@@ -1,0 +1,431 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;                                   /*  exraspace remove ho gaya  */
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;                           /* scrolebar nahi dikhega(uper niche nahi kar payenge) */
+}
+
+.main {
+    display: flex;
+    height: 100vh;                           /* 100% of viewport height pure screen pe */
+    /*padding: 0.5rem;                           taki thora sa space ho jaye home icon (screen)  */
+}
+
+.sidebar {
+    background-color: #000;
+    /* width: 340px; */
+    width: 370px;
+    border-radius: 1rem;                   /* 1rem=16px */
+    /* margin-right: 0.5rem; */
+}
+
+.main-content {
+    background-color: #121212;
+    flex: 1;                                    /* means side bar jitni bhi jagha le par muje sari jagha de do */
+    border-radius: 1rem;
+    overflow: scroll;                          /*jab jarurat hogi tabhi dikhaie dega scrolebar  */
+    scrollbar-width: thin;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0 0.75rem 0 0.75rem;
+}
+
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 74px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav {
+    background-color: #121212;
+    height: 100px;
+    /* border-radius: 1rem;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;                    /* vertically content center me ayega */
+    /* rems ke form me padding es liye hai kuki website
+    ko responsive banane ke liye  smaller screen size 
+    then font size ke hisab se  padding work kar rahi hogi*/
+    padding: 0.5rem 0.7rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.nav-option {
+    line-height: 2.5rem;                                  /* kitna area ek line occupy karegi */
+    opacity: 0.7;
+}
+
+.nav-option:hover {
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.library {
+    background-color: #121212;
+    border-radius: 1rem; 
+    height: 100%;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.options {
+    display: flex;                                /*ek line me a gaye  */
+    justify-content: space-between;               /* middle me space ho jayega to dono apne corner me a jayenge */
+    align-items: center;                          /* vertically center me a jayenge */
+    padding: 0.5rem 1rem;
+}
+
+.lib-option img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i {
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.box {
+    height: 8rem;
+    background-color: #1e1d1d;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    padding: 0.8rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.box-p1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.box-p2 {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    /* font-weight: 400; */
+}
+
+.badge {
+    background-color: #fff;
+    border: none;                              /*button ko default border milta hai  */
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    width: fit-content;                          /*content me fit ho jayega */
+    height: 2rem;
+}
+
+.badge:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-badge {
+    background-color: #000;
+    color: #fff;
+}
+
+.dark-badge:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;                          /*vertically center me alignmet */     
+    /* padding: 1rem 0 1rem 0;    */
+    margin: 0.5rem 0 0.5rem 0;
+    z-index: 10;                                  /*top me visible hogi top bar complete black  */                                     
+}
+
+.sticky-nav-icons img {
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+    margin-right: 0.8rem;
+    display: flex;
+    justify-content: space-around;                             /* left-right center */
+    align-items: center;                                  /* top-bottm center */
+}
+
+.nav-item {
+    margin-right: 0.9rem;
+}
+
+@media (max-width: 1000px){                       /* for hiding if px reach belo 1000px */
+    .hide {
+        display: none;
+    }
+}
+
+.card {
+    background-color: #1e1d1d;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin: 1rem 0 0 1.5rem;
+}
+
+.cards-container {
+    display: flex;                        /*indivusual div same line me a jayenge */
+    flex-wrap: wrap;                        /* jitni width chiye utni to chiye agar multiple hai to next line me a jayenge */      
+} 
+
+.card-img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-info {
+    font-size: 0.78rem;
+    opacity: 0.8;
+}
+
+.footer {
+    /* height: 300px; */
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    height: 50%;
+    width: 95%;
+    border-top: 2px solid white;
+    opacity: 0.4;
+}
+
+.music-player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album {
+    width: 25%;
+    /* background-color: pink; */
+    display: flex;                                /*ek line me a gaye  */
+    justify-content: space-between;               /* middle me space ho jayega to dono apne corner me a jayenge */
+    align-items: center;                          /* vertically center me a jayenge */
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.controls {
+    width: 25%;
+    /* background-color: green; */
+}
+
+.player {
+    width: 50%;
+    /* background-color: orange; */
+}
+
+.player-controls  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon {
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+}
+
+.player-control-icon-play {
+    margin-right: 1.75rem;
+    opacity: 0.95;
+    height: 2.3rem;
+}
+
+.player-control-icon-play:hover {
+    opacity: 1;
+    height: 2.5rem;
+}
+
+.playback-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 70%;
+    appearance: none;                                   /* phale se set chije hatana hai to */  
+    background-color: transparent;
+    cursor: pointer;                                        
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+  .player-name {
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap;  */
+    align-items: center;
+    
+  }
+  
+
+  .player-name-icon {
+    width: 56px; /* Adjust the width of the icon */
+    height: 56px; /* Adjust the height of the icon */
+    border-radius: 0.5rem; /* Make the icon circular */
+    padding: 0.7rem; /* Add some space between the icon and the text */
+}
+  
+  .player-name-ti {
+    
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;  /* Adjust the line height for better spacing */
+    padding-left: 0.3rem;
+    /* width: 100%; */
+}
+
+.player-name-text {
+    margin: 0;  /* Remove any default margin */
+    font-size: 1rem;  /* Adjust the font size */
+}
+  
+  .player-name-info {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0; /* Remove any default margin */
+    margin-top: 0.5rem;  /* Add space between the title and the artist name */
+}
+
+.player-img {
+    display: flex;
+    align-items: center;
+    line-height: 1.2;  /* Adjust the line height for better spacing */
+    gap: 1rem; /* Add space between the icons */
+}
+
+.player-img i {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    opacity: 0.7;
+}
+
+.player-img i:hover {
+    opacity: 1;
+    font-size: 1.7rem;
+}
+
+
+
+.controls {
+    background-color: black;
+    height: 72px;
+    display: flex;
+    justify-content: space-between; /* Adjusted to space between for even spacing */
+    align-items: center;
+    padding: 0 1rem; /* Add padding to the control div */
+}
+
+/* .icon, .icon-2, .playback-icon {
+    display: flex;
+    justify-content: space-around;
+  } */
+
+  .icon, .icon-2, .playback-icon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.3rem; /* Add padding to the icon sections */
+    gap: 1rem; /* Add gap between the icons */
+}
+
+.icon i, .icon-2 i, .playback-icon i {
+    font-size: 1rem;
+    /* margin-left: 0.5rem; */
+    opacity: 0.7;
+}
+
+.icon i:hover, .icon-2 i:hover, .playback-icon i:hover {
+    opacity: 1;
+    font-size: 1.2rem;
+}
+
+.volume-bar {
+    width: 6.25rem; /* Adjust the width of the volume bar */
+    appearance: none; 
+    background-color: transparent;
+    cursor: pointer;
+    height: 0.4rem; /* Increase the height of the volume bar */
+}
+
+.volume-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 6.25rem;
+    height: 0.4rem; /* Increase the height of the track */
+}
+
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+.fa-solid.fa-up-right-and-down-left-from-center {
+    margin-right: 1rem; /* Add some space from the right */
+}
